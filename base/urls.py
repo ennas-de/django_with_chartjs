@@ -2,6 +2,7 @@ from django.urls import path
 from .views import (bar, line, bubble, doughnut,
                     scatter, radar)
 
+# add urlpatterns
 urlpatterns = [
     path('bar/',bar, name='bar-chart'),
     path('line/',line, name='line-chart'),
