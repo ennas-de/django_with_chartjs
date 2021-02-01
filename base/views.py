@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Country
 
+# add views
+
+
 def bar(request):
     labels = []
     data = []
@@ -9,10 +12,11 @@ def bar(request):
         labels.append(country_data.country)
         data.append(country_data.population)
     context = {
-        'labels':labels,
-        'data':data
+        'labels': labels,
+        'data': data
     }
     return render(request, 'index.html', context)
+
 
 def line(request):
     labels = []
@@ -22,10 +26,11 @@ def line(request):
         labels.append(country_data.country)
         data.append(country_data.population)
     context = {
-        'labels':labels,
-        'data':data
+        'labels': labels,
+        'data': data
     }
-    return render(request, 'line.html',context)
+    return render(request, 'line.html', context)
+
 
 def bubble(request):
     labels = []
@@ -35,10 +40,11 @@ def bubble(request):
         labels.append(country_data.country)
         data.append(country_data.population)
     context = {
-        'labels':labels,
-        'data':data
+        'labels': labels,
+        'data': data
     }
     return render(request, 'bubble.html', context)
+
 
 def doughnut(request):
     labels = []
@@ -48,10 +54,11 @@ def doughnut(request):
         labels.append(country_data.country)
         data.append(country_data.population)
     context = {
-        'labels':labels,
-        'data':data
+        'labels': labels,
+        'data': data
     }
-    return render(request, 'doughnut.html',context)
+    return render(request, 'doughnut.html', context)
+
 
 def scatter(request):
     labels = []
@@ -61,10 +68,11 @@ def scatter(request):
         labels.append(country_data.country)
         data.append(country_data.population)
     context = {
-        'labels':labels,
-        'data':data
+        'labels': labels,
+        'data': data
     }
-    return render(request, 'scatter.html',context)
+    return render(request, 'scatter.html', context)
+
 
 def radar(request):
     labels = []
@@ -74,7 +82,7 @@ def radar(request):
         labels.append(country_data.country)
         data.append(country_data.population)
     context = {
-        'labels':labels,
-        'data':data
+        'labels': labels,
+        'data': data
     }
     return render(request, 'radar.html', context)
